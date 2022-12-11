@@ -1,0 +1,137 @@
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+body{
+    background-color: var(--Light-Gray);
+}
+/* typography */
+
+
+h1{
+    font-size: 1.4rem;
+}
+h2{
+    font-size: 1rem;
+    color: white;
+}
+p{
+    font-size: .8rem;
+    color: var(--Light-Gray);
+    font-weight: 500;
+}
+
+
+/* start cards */
+
+
+
+.cards{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+    border-radius: 5px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.join-us{
+    grid-column: 1 / 5;
+    grid-row: 1;
+    padding: 2.5em;
+}
+.join-us h1{
+    color: var(--Cyan);
+    margin-bottom: 1em;
+}
+.join-us h2{
+    color: var(--Bright-Yellow);
+    margin-bottom: .75em;
+}
+.join-us p{
+    color: var(--Grayish-Blue);
+    line-height: 1.7;
+}
+.subscribe{
+    grid-column: 1 / 3;
+    grid-row: 2;
+    padding: 2em;
+    background-color: var(--Cyan);
+    color: white;
+    border-bottom-left-radius: 5px;
+}
+.subscribe h2{
+    padding-bottom: 1em;
+}
+.subscribe .price{
+    display: flex;
+    align-items: center;
+    margin-bottom: .25em;
+}
+.subscribe .price h1{
+    font-size: 2em;
+}
+.subscribe .price h3{
+    font-size: .9em;
+    font-weight: 400;
+    color:  rgb(141, 207, 206);
+    margin-left: 1em;
+}
+.subscribe p{
+    margin-bottom: 1.75em;
+}
+.subscribe .btn{
+    color: white;
+    background-color: var(--Bright-Yellow);
+    border: none;
+    border-radius: 5px;
+    padding: 1.2em 0;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+}
+.info{
+    grid-column: 3 / 5;
+    grid-row: 2;
+    padding: 2em;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(74, 190, 189);
+}
+@media (max-width:800px){
+    .cards{
+        min-width: 300px;
+        margin: 3em 0;
+        border: 1px solid red;
+    }
+    .join-us,
+    .subscribe,
+    .info{
+        padding: 1.25em;
+    }
+    .subscribe{
+        grid-column: 1 / 5;
+        border-bottom-left-radius: 0;
+    }
+    .info{
+        grid-column: 1 / 5;
+        grid-row: 3;
+        border-bottom-left-radius: 5px;
+    }
+}
+.info h2{
+    color: white;
+    margin-bottom: 1em;
+}
+.info p{
+    line-height: 1.5;
+}
